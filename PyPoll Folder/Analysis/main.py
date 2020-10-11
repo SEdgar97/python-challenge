@@ -32,15 +32,6 @@ with open(csvpath) as csvfile:
         else:
             candidates[candidate]=1
         break 
-print("Election Results")
-print("-----------")
-print(f"Total Votes: {totalvotes}")
-with open(csvpath) as csvfile:
-    csvreader= csv.reader(csvfile, delimiter=',')
-    print(csvreader)
-    csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
-    print(type(csv_header))    
     for row in csvreader:
         canvotes+=candidates[candidate]+1
         percentvotes=(candidates[candidate]/totalvotes)*100
@@ -48,12 +39,23 @@ with open(csvpath) as csvfile:
             mostvoted= candidate
             mostvotes= candidates[candidate]
             break
+"Final Product"
+print("Election Results")
+print("-----------")
+print(f"Total Votes: {totalvotes}")   
 print(f"{candidate}: {int(percentvotes)}% {totalvotes}")
 print("-----------")
 print(f"Winner: {mostvoted}")
 print("----------")
 
-
+"Convert to TextFile"
+text_file=open("PyPoll Final Script.py.txt", "w")
+text_file.write("Election Results\n")
+text_file.write("--------------\n")
+text_file.write("Total Votes:" + str(totalvotes) + "\n")
+text_file.write(str(candidate)+ str(percentvotes) + str(canvotes) + "\n")
+text_file.write("Winner" + str(mostvoted) + "\n")
+text_file.close()
       
     
 

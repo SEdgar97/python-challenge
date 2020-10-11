@@ -1,0 +1,7 @@
+Financial Analysis
+--------------
+Total Months84
+Total36530039
+Average Monthly Change(434881.4166666667, 2)
+Greatest Decrease-1196225
+Greatest Increase1170593

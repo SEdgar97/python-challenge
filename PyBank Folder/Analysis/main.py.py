@@ -9,7 +9,7 @@ greatest_inc_date=0
 prof_loss=[]
 date=[]
 
-"importing a csv file"
+"Import csv"
 import os
 import csv
 csvpath=os.path.join('C:/Users/sledg/PythonData/python-challenge/PyBank Folder/Resources/02-Homework_03-Python_Instructions_PyBank_Resources_budget_data (1).csv.')
@@ -21,7 +21,7 @@ with open(csvpath)as csvfile:
     print(type(csv_header))
     for row in csvreader:
         print(row)
-"Analyze Script"
+"Analysis"
 with open(csvpath)as csvfile:
     csvreader= csv.reader(csvfile, delimiter=',')
     print(csvreader)
